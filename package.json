@@ -3,8 +3,13 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"engines": {
+		"node": "18"
+	},
 	"scripts": {
 		"prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+		"build": "npx tsc && cp package*.json ./build && cd ./build && npm ci --production",
+		"start": "node build/server.js",
 		"start:dev": "nodemon --exec node --inspect=0.0.0.0:9229 --require ts-node/register src/server.ts",
 		"migration:run": "npm run typeorm migration:run -- -t=false -d src/config/databaseConfig.ts",
 		"seed:run": "npm run typeorm migration:run -- -t=false -d src/config/databaseConfig.ts ",
