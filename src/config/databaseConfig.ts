@@ -20,7 +20,7 @@ const dataSource = new DataSource({
 
 export async function connectionDB() {
 	const pool = await dataSource.initialize();
-	await pool.runMigrations();
+	await pool.runMigrations({ transaction: 'none' });
 	console.log('Connected in database with success.');
 
 	return pool;
