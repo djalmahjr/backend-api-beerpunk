@@ -1,0 +1,24 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"prettier",
+		"@typescript-eslint/eslint-plugin"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"rules": {
+		"no-console": "off",
+		"prettier/prettier": 2,
+		"no-unused-vars": "off"
+	}
+}
