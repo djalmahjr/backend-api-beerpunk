@@ -12,7 +12,6 @@
 		"start": "node build/server.js",
 		"start:dev": "nodemon --exec node --inspect=0.0.0.0:9229 --require ts-node/register src/server.ts",
 		"migration:run": "npm run typeorm migration:run -- -t=false -d src/config/databaseConfig.ts",
-		"seed:run": "npm run typeorm migration:run -- -t=false -d src/config/databaseConfig.ts ",
 		"migration:revert": "npm run typeorm migration:revert -- -d src/config/databaseConfig.ts",
 		"lint": "npx eslint . --fix",
 		"typeorm": "typeorm-ts-node-commonjs",
